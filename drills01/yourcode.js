@@ -1,16 +1,16 @@
 
+function sumArray(){
+	
+}
 
-function sumArray(a){
+function fitWithinVal(){
 
 }
 
-function fitWithinVal(array, val){
+function getAllNamesShorterThan(){
 
 }
 
-function getAllNamesShorterThan(a, len){
-}
-
-function makeLabel(d){
+function makeLabel(){
 
 }
