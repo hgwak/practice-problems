@@ -27,10 +27,19 @@ function fitWithinVal(array, someNumber){
     return newArray;
 }
 
-function getAllNamesShorterThan(){
-
+function getAllNamesShorterThan(arrayOfNames, nameLength){
+    let shorterNames = [];
+    for(let i = 0; i < arrayOfNames.length; i++){
+        if(arrayOfNames[i].length < nameLength){
+            shorterNames.push(arrayOfNames[i]);
+        }
+    }
+    return shorterNames;
 }
 
-function makeLabel(){
-
+function makeLabel(address){
+    let returnLabel;
+    let {familyName, givenName, greeting} = address;
+    let {streetNumber, streetName, state, zip, city} = address['home address'];
+    return returnLabel = greeting + " " + givenName + " " + familyName + "\n" + streetNumber + " " + streetName + "\n" + city + ", " + state + " " + zip;
 }
