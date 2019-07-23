@@ -39,6 +39,23 @@ function getMinMaxMean(array){
     return minMaxMean;
 }
 
-function findMode(){
-
+function findMode(array){
+    let highestCount = 0;
+    let currentMode = 0;
+    for(let i = 0; i < array.length; i++){
+        let count = 0;
+        for(let j = 0; j < array.length; j++){
+            if(j === i){
+                continue;
+            }
+            if(array[i]===array[j]){
+                count++;
+            }
+            if(count >= highestCount){
+                highestCount = count;
+                currentMode = array[i]
+            }
+        }
+    }
+    return currentMode;
 }
