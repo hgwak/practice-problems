@@ -50,6 +50,7 @@ var testVals = [{
             ['cash advance','Chase','20.00']
           ];
           const firstSection = $(".testOutput:nth-child(1)");
+          console.log(firstSection)
           const testArray = [];
           const children = firstSection.find('*').each( (index, element) => {
             testArray.push( $(element).text());
@@ -65,7 +66,6 @@ var testVals = [{
           }).length === expected.length;
           console.log(answer);
           return answer;
-          
         }
         
       },
