@@ -29,8 +29,11 @@ class ComboMath {
         return divideNum1 / divideNum2
     }
 
-    cocococombo () {
-        return this.multiple( this.num1, this.num2 )
+    cocococombo=()=>{
+        let promise = new Promise((resolve, reject)=>{
+            setTimeout(()=>{resolve('complete')},0)
+        })
+        return promise.then(this.multiple( this.num1, this.num2 ))
             .then( result => this.add( result, this.num3 ))
                 .then(result =>  this.divide(result, this.num4))
                     .then(result => this.subtract(result, this.num5))
